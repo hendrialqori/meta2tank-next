@@ -1,11 +1,11 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import styles from "@/styles";
 import { slideIn, staggerContainer, textVariant } from "@/utils/motion";
 
 export const Hero: React.FC = () => {
   return (
     <section className={`${styles.yPaddings} sm:pl-16 pl-6`}>
-      <motion.div
+      <m.div
         variants={staggerContainer("", "")}
         initial="hidden"
         whileInView="show"
@@ -13,16 +13,16 @@ export const Hero: React.FC = () => {
       >
         <div className={`${styles.innerWidth} mx-auto flex flex-col`}>
           <div className="flex flex-col justify-center items-center relative z-10">
-            <motion.h1
-              variants={textVariant(1.1)}
+            <m.h1
+              // variants={textVariant(1.1)}
               initial="hidden"
               whileInView="show"
               className={`${styles.heroHeading}`}
             >
               META2TANK
-            </motion.h1>
-            <motion.div
-              variants={textVariant(1.2)}
+            </m.h1>
+            <m.div
+              // variants={textVariant(1.2)}
               initial="hidden"
               whileInView="show"
               className="flex flex-row items-center justify-center"
@@ -30,10 +30,10 @@ export const Hero: React.FC = () => {
               <h1 className={styles.heroHeading}>MA</h1>
               <h1 className={styles.heroDText} />
               <h1 className={styles.heroHeading}>NESS</h1>
-            </motion.div>
+            </m.div>
           </div>
-          <motion.div
-            variants={slideIn("right", "tween", 0.2, 1)}
+          <m.div
+            // variants={slideIn("right", "tween", 0.2, 1)}
             className="relative w-full md:-mt-[20px] -mt-[12px]"
           >
             <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-[0] -top-[30px]" />
@@ -53,9 +53,9 @@ export const Hero: React.FC = () => {
               />
             </a>
             {/* </div> */}
-          </motion.div>
+          </m.div>
         </div>
-      </motion.div>
+      </m.div>
     </section>
   );
 };

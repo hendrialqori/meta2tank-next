@@ -77,7 +77,7 @@ export const textVariant2 = {
     opacity: 0,
     y: 20,
   },
-  show: {
+  show:  {
     opacity: 1,
     y: 0,
     transition: {
